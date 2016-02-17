@@ -174,39 +174,6 @@ def iterative_deepening_search(problem):
         if result is not 'cutoff':
             return result
 
-
-# ______________________________________________________________________________
-# Informed (Heuristic) Search
-
-def best_first_graph_search(problem, f):
-    """Search the nodes with the lowest f scores first.
-    You specify the function f(node) that you want to minimize; for example,
-    if f is a heuristic estimate to the goal, then we have greedy best
-    first search; if f is node.depth then we have depth-first search.
-    There is a subtlety: the line "f = memoize(f, 'f')" means that the f
-    values will be cached on the nodes as they are computed. So after doing
-    a best first search you can examine the f values of the path returned."""
-    f = memoize(f, 'f')
-    return graph_search(problem, PriorityQueue(min, f))
-
-
-greedy_best_first_graph_search = best_first_graph_search
-
-
-# Greedy best-first search is accomplished by specifying f(n) = h(n).
-
-def astar_search(problem, h=None):
-    """A* search is best-first graph search with f(n) = g(n)+h(n).
-    You need to specify the h function when you call astar_search.
-    Uses the pathmax trick: f(n) = max(f(n), g(n)+h(n))."""
-    h = h or problem.h
-
-    def f(n):
-        return max(getattr(n, 'f', -infinity), n.path_cost + h(n))
-
-    return best_first_graph_search(problem, f)
-
-
 # _____________________________________________________________________________
 # The remainder of this file implements examples for the search algorithms.
 
