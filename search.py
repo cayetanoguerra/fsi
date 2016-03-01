@@ -295,7 +295,7 @@ australia.locations = Dict(WA=(120, 24), NT=(135, 20), SA=(135, 30),
                            Q=(145, 20), NSW=(145, 32), T=(145, 42), V=(145, 37))
 
 
-class GraphProblem(Problem):
+class GPSProblem(Problem):
     """The problem of searching in a graph from one node to another."""
 
     def __init__(self, initial, goal, graph):
