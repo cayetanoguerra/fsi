@@ -1,6 +1,4 @@
-# coding: utf-8
-
-#Práctica 2
+# Week 2
 
 import search
 
