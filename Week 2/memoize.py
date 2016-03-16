@@ -8,7 +8,7 @@ def memoize(f):
     return helper
 
 
-#@memoize
+@memoize
 def fib(n):
     if n == 0:
         return 0
@@ -17,7 +17,21 @@ def fib(n):
     else:
         return fib(n-1) + fib(n-2)
 
-fib = memoize(fib)
+
+@memoize
+def fib3(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    elif n == 2:
+        return 2
+    else:
+        return fib3(n-1) + fib3(n-2) + fib3(n-3)
+
+
+
+#fib = memoize(fib)
 
 #print(fib(40))
 
@@ -25,5 +39,6 @@ import time
 
 for i in range(1, 39):
     t1 = time.time()
-    fib(i)
+    print fib(i)
+    print fib3(i)
     print "Tiempo: ", i, " -- ", time.time()-t1
