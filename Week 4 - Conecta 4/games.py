@@ -228,10 +228,13 @@ class TicTacToe(Game):
 
     def display(self, state):
         board = state.board
-        for x in range(1, self.h+1):
-            for y in range(1, self.v+1):
+        for y in range(self.v, 0, -1):
+            for x in range(1, self.h+1):
                 print board.get((x, y), '.'),
             print
+        print "-------------------"
+        for n in range(1, self.h+1):
+            print n,
 
     def compute_utility(self, board, move, player):
         "If X wins with this move, return 1; if O return -1; else return 0."

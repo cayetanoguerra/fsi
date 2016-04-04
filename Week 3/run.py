@@ -1,6 +1,8 @@
 import games
 
 game = games.TicTacToe()
+
+
 state = game.initial
 
 
@@ -19,8 +21,9 @@ while True:
         player = 'X'
     else:
         print "Thinking..."
-        #move = games.minimax_decision(state, game)
-        move = games.alphabeta_full_search(state, game)
+        move = games.minimax_decision(state, game)
+        #move = games.alphabeta_full_search(state, game)
+        #move = games.alphabeta_search(state, game)
 
         state = game.make_move(move, state)
         player = 'O'
