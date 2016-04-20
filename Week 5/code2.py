@@ -32,5 +32,7 @@ for step in xrange(0, 1000):
     sess.run(train)
     if step % 100 == 0:
         print step, sess.run(m), sess.run(b)
+        
+sess.close()
 
 # Learns best fit is m: 2. , b: 3.

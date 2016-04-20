@@ -28,5 +28,7 @@ for step in xrange(0, 10000):
     sess.run(train)
     if step % 100 == 0:
         print step, sess.run(W), sess.run(b)
+        
+sess.close()
 
 # Learns best fit is W: [[0.100  0.200]], b: [0.300]
