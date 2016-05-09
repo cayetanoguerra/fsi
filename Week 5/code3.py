@@ -32,3 +32,4 @@ for step in xrange(0, 10000):
 sess.close()
 
 # Learns best fit is W: [[0.100  0.200]], b: [0.300]
+
