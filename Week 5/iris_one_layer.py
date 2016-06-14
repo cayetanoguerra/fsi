@@ -33,7 +33,7 @@ y_ = tf.placeholder("float", [None, 3])
 W = tf.Variable(np.float32(np.random.rand(4, 3))*0.1)
 b = tf.Variable(np.float32(np.random.rand(3))*0.1)
 
-y = tf.nn.softmax((tf.sigmoid(tf.matmul(x, W) + b)))
+y = tf.nn.softmax(tf.matmul(x, W) + b)
 
 
 cross_entropy = tf.reduce_sum(tf.square(y_ - y))
