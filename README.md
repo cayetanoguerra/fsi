@@ -1,2 +1,4 @@
-# Fundamentos de los Sistemas Inteligentes
-Prácticas de Fundamentos de los Sistemas Inteligentes
+# Fundamentos de los Sistemas Inteligentes. ULPGC.
+Prácticas de Fundamentos de los Sistemas Inteligentes.
+
+
